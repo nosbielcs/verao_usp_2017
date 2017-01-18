@@ -1,4 +1,16 @@
-\documentclass[]{article}
+\documentclass[12pt]{article}
+\usepackage[brazilian]{babel} %traduz para o pt-br
+\usepackage[utf8]{inputenc} %reconhece acentua\c{c}\~{a}o
+\usepackage{lipsum} %gera textos aleat\'{o}rios
+\usepackage{graphicx} %uso de imagens
+\usepackage{amssymb} % para exibir simbolos matematicos
+\usepackage{subfig} %uso de caixa de figuras
+\usepackage{amsmath} %para usar begin{cases}
+\usepackage{amsfonts} %para usar mathbb
+\usepackage{float} %fixa tabela e imagens flutuantes
+\graphicspath{{images/}} %diretorio onde ficar\~{a}o imagens
+\usepackage{latexsym}
+\usepackage{lineno} %para mostrar numeração de linhas
 
 %opening
 \title{Lista 01}
@@ -8,11 +20,51 @@
 
 \maketitle
 
-\begin{abstract}
+\section*{Exercício 03}
+Dados $A, B_1, ... , B_n \leq 1$, subconjuntos de $\mathcal{U} = \mathbb{Z}$, mostre que:
 
-\end{abstract}
+a) $(A^c)^c = A$
 
-\section{Exercício 03}
-Dados $A, B_1, ... , B_n \leq 1$, subconjuntos de $\mathcal{U} = \mathbb{Z}$
+Seja: $A^c = 1-A$;
+
+Então: $(1-A)^c = (1-(1-A)) = 1-1+A = A$
+
+\bigskip
+
+b) $(\overset{n}{\underset{i=1}{\cup}} B_i)^c = \overset{n}{\underset{i=1}{\cap}} B_i^c$ e $(\overset{n}{\underset{i=1}{\cap}} B_i)^c = \overset{n}{\underset{i=1}{\cup}} B_i^c$
+
+Seja: $(\overset{n}{\underset{i=1}{\cup}} B_i)^c$
+
+$= (B_1 \cup B_2 \cup ... \cup B_n)^c$
+
+$= B_1^c \cup B_2^c \cup ... \cup B_n^c$
+
+$= B_1 \cap B_2 \cap ... \cap B_n$
+
+$= \overset{n}{\underset{i=1}{\cap}} B_i^c$
+
+e seja: $(\overset{n}{\underset{i=1}{\cap}} B_i)^c$
+
+$= (B_1 \cap B_2 \cap ... \cap B_n)^c$
+
+$= B_1^c \cap B_2^c \cap ... \cap B_n^c$
+
+$= B_1 \cup B_2 \cup ... \cup B_n$
+
+$= \overset{n}{\underset{i=1}{\cup}} B_i^c$
+
+\bigskip
+
+c) Se $\mathcal{B}=\{B_1,...,B_n\}$ é uma partição de $\mathcal{U}$, então a coleção $\{B_1 \cap A, ..., B_n \cap A\}$ é uma partição de A.
+
+Aplicando a propriedade $(\underset{i \in I}{\cup A_i}) \cup B = \underset{i \in I}{\cup} (A_i \cup B)$ ao problema, temos que:
+
+$(\underset{i \in I}{\cup B_i}) \cup A$
+
+$= \underset{i \in I}{\cup} (B_i \cup A)$
+
+$=(B_1 \cap A) \cup (B_2 \cap A) \cup ... \cup (B_n \cap A)$
+
+$=\{B_1 \cap A, B_2 \cap A, ... , B_n \cap A\}$
 
 \end{document}
