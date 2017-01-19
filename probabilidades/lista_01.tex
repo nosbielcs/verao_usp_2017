@@ -72,10 +72,30 @@ $=\{B_1 \cap A, B_2 \cap A, ... , B_n \cap A\}$
 
 De quantas maneiras podemos distribuir n objetos em duas caixas de modo que nenhuma caixa fique vazia, quando:
 
+\bigskip
+
 a) Os objetos e as caixas são diferentes?
 
+Quando os objetos e caixas são diferentes, existindo n objetos, tem, dessa forma, $2^n$ modos de arranjá-los em duas caixas distintas.
+
+Porém, excluí-se duas dessas opções, uma vez que nenhuma das duas caixas pode ficar vazia. Dessa forma, têm-se como resposta do exercício $2^n-1$ modos de distribuir n objetos distintos em duas caixas distintas. 
+
+\bigskip
 
 b) Os objetos são iguais e as caixas diferentes?
+
+Considerando as caixas A e B, têm-se:
+
+\begin{tabular}{cc}
+	$A$ & $B$ \\ 
+	**** ... nX * & I \\ 
+\end{tabular} 
+   
+Utilizando-se o conceito de Combinações Completas, têm-se: \medskip
+
+$\displaystyle \dfrac{(n+1)!}{n!}=n+1$ \medskip
+
+Uma vez que as caixas devem ter no mínimo um objeto, deve-se desconsiderar dois arranjos. Assim sendo, a resposta do problema é $n+1-2=n-1$. Portanto, $n-1$ modos de arranjar os objetos.
 
 \section*{Exercício 11}
 
@@ -164,5 +184,7 @@ $= 20 \times 3 \times 1 = 60$ anagramas
 \section*{Exercício 20}
 
 Quantas são as soluções não negativas da inequação $x + y + z \leq 2$?
+
+
 
 \end{document}
