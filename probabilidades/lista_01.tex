@@ -81,7 +81,35 @@ b) Os objetos são iguais e as caixas diferentes?
 
 a) Um químico possui 10 tipos de substâncias: $/{A_1, A_2, .., A_n/}$. De quantos modos poderá combinar 6 dessas substâncias se, entre as dez, duas não podem estar juntas?
 
+\textbf{1º Caso:} $A_1$ está na reação
+Arranjemos do seguinte modo:
+$A_1 \times 8 \times 7 \times 6 \times 5 \times 4 = 6720$.
+
+Como a ordem não importa neste caso, dividiremos o resultado por 5!, resultando em 56 modos distintos.
+
+\textbf{2º Caso:} $A_2$ está na reação
+Arranjemos do seguinte modo:
+$A_2 \times 8 \times 7 \times 6 \times 5 \times 4 = 6720$.
+
+Como a ordem não importa neste caso, dividiremos o resultado por 5!, resultando em 56 modos distintos.
+
+\textbf{3º Caso:} Nem $A_1$, nem $A_2$ estão na reação. Arranjemos do seguinte modo:
+$8 \times 7 \times 6 \times 5 \times 4 \times 3 = 20160$.
+
+Como a ordem não importa neste caso, dividiremos o resultado por 6!, resultando em 28 modos distintos.
+
+Assim sento, pelo Princípio Aditivo, têm-se $56 + 56 + 28 = 140$ reações distintas.
+
 b) O mesmo químico tem a hipótese de que ao dissolver 5 doses de 2 ml das substâncias $/{A_1, .., A_10/}$ (as doses podem ser repetidas) em 5 ml de água, obterá uma solução útil ao combate da dengue. O químico precisa fazer um experimento no laboratório com todas as soluções possíveis. Qualé o número máximo de testes a serem feitos pelo químico? (suponha que a ordem de dissolução não afeta a solução final).
+
+Como a ordem das substâncias não importa, temos pelo princípio da Combinação Completa a seguinte resolução:
+
+\begin{tabular}{cccccccccc}
+	$A_1$ & $A_2$ & $A_3$ & $A_4$ & $A_5$ & $A_6$ & $A_7$ & $A_8$ & $A_9$ & $A_10$ \\ 
+	***** & I & I & I & I & I & I & I & I & I \\ 
+\end{tabular}  
+       
+Assim sendo, temos $\displaystyle \dfrac{14!}{5! \times 9!} = 2002$. Logo, há 2002 testes a serem feitos.
 
 \section*{Exercício 13}
 
