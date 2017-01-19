@@ -185,6 +185,20 @@ $= 20 \times 3 \times 1 = 60$ anagramas
 
 Quantas são as soluções não negativas da inequação $x + y + z \leq 2$?
 
+Trata-se de um problema envolvendo \textbf{combinações completas}. \medskip
 
+$CR_n^p = C_{n+p-1}^p$ \medskip
+
+E sendo $\displaystyle C_{n+p-1}^p = \binom{n+p-1}{p} = \frac{(n+p-1)!}{(n-1)! \times p!}$
+
+Então, são apresentadas todas as possibilidades de solução da inequação:
+
+$x + y + z = 2 \rightarrow CR_3^2 \rightarrow C_4^2$; aqui tem-se n=3 e p=2.
+
+$x + y + z = 1 \rightarrow CR_3^1 \rightarrow C_3^1$; aqui tem-se n=3 e p=1.
+
+$x + y + z = 0 \rightarrow CR_3^0 \rightarrow C_2^0$; aqui tem-se n=3 e p=0. \medskip
+
+Aplicando o \textit{principio aditivo}, temos que as soluções não negativas para inequação pode ser dada por $C_4^2 + C_3^1 + C_2^0 = 6 + 3 + 1 = 10$ maneiras de solucionar.
 
 \end{document}
