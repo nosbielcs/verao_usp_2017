@@ -78,7 +78,7 @@ a) Os objetos e as caixas são diferentes?
 
 Quando os objetos e caixas são diferentes, existindo n objetos, tem, dessa forma, $2^n$ modos de arranjá-los em duas caixas distintas.
 
-Porém, excluí-se duas dessas opções, uma vez que nenhuma das duas caixas pode ficar vazia. Dessa forma, têm-se como resposta do exercício $2^n-1$ modos de distribuir n objetos distintos em duas caixas distintas. 
+Porém, excluí-se duas dessas opções, uma vez que nenhuma das duas caixas pode ficar vazia. Dessa forma, têm-se como resposta do exercício $2^n-2$ modos de distribuir n objetos distintos em duas caixas distintas. 
 
 \bigskip
 
@@ -144,6 +144,12 @@ $\mathcal{I}:$ constituído pelas funções de $\mathcal{F}$ que associam a cada
 $\mathcal{S}:$ constituído pelas funções sobrejetoras de $\mathcal{F}$.
 
 Determine $|\mathcal{F}|, |\mathcal{I}| e |\mathcal{S}|$.
+
+Para calcular $|\mathcal{F}|$, é considerado que os elementos do conjunto de tamanho $2n$ obrigatoriamente devem receber pelo menos 1 relacionamento com qualquer um dos elementos do conjunto que possuí $2n+1$ elementos. Portanto, $|\mathcal{F}| = 2n^{2n+1}$.
+
+Para encontrar $|\mathcal{I}|$, é considerado que os conjuntos de dividem em em 2 subconjuntos (elementos pares e elementos impares). Assim sendo, o conjunto que possuí $2n+1$ elementos é dividido da seguinte maneira: n elementos pares e n+1 elementos ímpares. O outro conjunto, que possuí 2n elementos é dividido da seguinte maneira: n elementos pares e n elementos ímpares. Com isso, apenas a parte com n+1 (elementos ímpares) elementos do conjunto que possuí 2n+1 elementos irá se relacionar com os elementos do outro conjunto, ou seja, $n^{n+1}$. Resta então, permutar os demais elementos que não fazem parte da restrição, ou seja, $2n^{n}$. Portanto, aplicando o principio multiplicativo temos que $|\mathcal{I}| = n^{n+1} \times 2n^{n}$.
+
+Para a definição de $|\mathcal{S}|$, considera-se que todos elementos do conjunto com $2n$ elementos terá pelo menos uma relação com os elementos do outro conjunto de tamanho $2n+1$. Sendo assim, a contrapartida desta relação terá de imediato uma $C_{2n-1}^2$, pois o conjunto de tamanho $2n+1$ tem 1 elemento a mais do que o outro conjunto, sendo que os elementos deste outro conjunto receberão pelo menos 2 relações de cada um dos elementos do conjunto de tamanho $2n+1$. Além disso, sobrarão $(2n-1)!$ elementos do conjunto de tamanho $2n+1$ que se relacionarão com todos os elementos do conjunto de tamanho $2n+1$, pois são eliminados dois elementos devido a primeira restrição já aplicada. Portanto, aplicando o principio multiplicativo temos que $|\mathcal{S}| = C_{2n-1}^2 \times (2n-1)!$.
 
 \section*{Exercício 15}
 
