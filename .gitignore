@@ -178,3 +178,8 @@ TSWLatexianTemp*
 
 # KBibTeX
 *~[0-9]*
+
+.gitignore
+exploratoria/slide_final.pptx
+exploratoria/findrisk_report.docx
+exploratoria/findrisk_report.pdf
