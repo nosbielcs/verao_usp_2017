@@ -13,199 +13,195 @@
 \usepackage{lineno} %para mostrar numeração de linhas
 
 %opening
-\title{Análise Combinatória, Probabilidades e Aplicações - Lista 01}
-\author{{Arthur Cardoso Leite}, {Cleibson Aparecido de Almeida}}
+\title{Análise Combinatória, Probabilidades e Aplicações - Lista 03}
+\author{{Cleibson Aparecido de Almeida}}
 
 \begin{document}
 
 \maketitle
 
-\section*{Exercício 03}
+\section*{Exercício 01 - Para cada um dos experimentos abaixo, descreva o espaço amostral $\Omega$ adequado e apresente o número de elementos, quando for o caso.}
 
-Dados $A, B_1, ... , B_n \geq 1$, subconjuntos de $\mathcal{U} = \mathbb{Z}$, mostre que:
 
-a) $(A^c)^c = A$
+\subsection*{a - Um dado é lançado três vezes e a sequência de números obtida é anotada.}
 
-Aplicando a propriedades 9 [pág.15], em \cite{morgado_1991}.
+$\Omega = \{A \subseteq \{1,2,3,4,5,6\}: |A|=3\}$
 
-Seja: $A^c = 1-A$;
+Considerando que a ordem importa, pois $[1,2,3] \neq [2,1,3]$, temos $A_6^3=120$ elementos.
 
-Então: $(1-A)^c = (1-(1-A)) = 1-1+A = A$
+\subsection*{b - Numa determinada cidade, no mês de março, conta-se o número de problemas nas tubulações de água do bairro x.}
 
-\bigskip
+$\Omega = \{B \subseteq \{0,1,2,3,...,n\}: |B|=1\}$
 
-b) $(\overset{n}{\underset{i=1}{\cup}} B_i)^c = \overset{n}{\underset{i=1}{\cap}} B_i^c$ e $(\overset{n}{\underset{i=1}{\cap}} B_i)^c = \overset{n}{\underset{i=1}{\cup}} B_i^c$
+Neste caso, teremos $n+1$ elementos.
 
-Seja: $(\overset{n}{\underset{i=1}{\cup}} B_i)^c$
+\subsection*{c  - Um fichário com 13 nomes contém três nomes de mulheres. Seleciona-se fica a ficha, até o último nome de mulher ser selecionado, e anota-se o número de fichas selecionadas.}
 
-Aplicando as propriedades 10 e 11 [pág.15], em \cite{morgado_1991}. 
+$\Omega = \{C \subseteq \{1,2,3,..,13\}: 3 \leq |C| \leq 13\}$
 
-$= (B_1 \cup B_2 \cup ... \cup B_n)^c$
+Considerando que as fichas são selecionadas sem reposição, temos \textbf{???}
 
-$= B_1^c \cap B_2^c \cap ... \cap B_n^c$
+\subsection*{d - De um grupo de seis pessoas A, B, C, D, E e F, sorteiam-se duas, uma após a outra, sem reposição, e anota-se a configuração formada.}
 
-$= \overset{n}{\underset{i=1}{\cap}} B_i^c$
+$\Omega = \{D \subseteq \{A,B,C,D,E,F\}: |D|=2\}$
 
-e seja: $(\overset{n}{\underset{i=1}{\cap}} B_i)^c$
+Considerando que o sorteio é sem reposição, o número de elementos será $C_6^2=10$ elementos.
 
-$= (B_1 \cap B_2 \cap ... \cap B_n)^c$
+\subsection*{e - Como ficaria o espaço amostral do item c se as retiradas fossem com reposição.}
 
-$= B_1^c \cup B_2^c \cup ... \cup B_n^c$
+???
 
-$= \overset{n}{\underset{i=1}{\cup}} B_i^c$
+\subsection*{f - De um pacote contendo 20 jujubas, observa-se quantas tem a cor vermelha.}
 
-\bigskip
+$\Omega = \{F \subseteq \{1,2,3,...,20\}: 1 \leq |F| \leq 20\}$
 
-c) Se $\mathcal{B}=\{B_1,...,B_n\}$ é uma partição de $\mathcal{U}$, então a coleção $\{B_1 \cap A, ..., B_n \cap A\}$ é uma partição de A.
+O número de elementos será 20.
 
-Aplicando a propriedade $(\underset{i \in I}{\cup A_i}) \cup B = \underset{i \in I}{\cup} (A_i \cup B)$ ao problema, temos que:
+\subsection*{g - Registram-se o número de dias chuvosos e a precipitação total (em centímetros) durante uma semana em uma localidade.}
 
-$(\underset{i \in I}{\cup B_i}) \cup A$
+Seja C (dias chuvosos) e P (precipitação em mm), temos o seguinte espaço amostral.
 
-$= \underset{i \in I}{\cup} (B_i \cup A)$
+$\Omega = \{C \in \mathbb{Z_+}, P \in \mathbb{R} | C=[0,7], P=[0,200]$
 
-$=(B_1 \cap A) \cup (B_2 \cap A) \cup ... \cup (B_n \cap A)$
+\subsection*{h - Um dado é lançado em um alvo circular de raio unitário e observa-se o ponto acertado.}
 
-$=\{B_1 \cap A, B_2 \cap A, ... , B_n \cap A\}$
+Sendo A (área do circulo=$\pi \times r^2$) e H (ponto acertado) nas posições x (horizontal) e y (vertical), temos:
 
-\section*{Exercício 09}
+$\Omega = \{H \in \mathbb{R}; H \subseteq A | A=\pi \times r^2, H = [x,y], x = [-1,1], y = [-1,1]\}$
 
-De quantas maneiras podemos distribuir n objetos em duas caixas de modo que nenhuma caixa fique vazia, quando:
+\section*{Exercício 02 - Em cada um dos casos, verifique se $\mathcal{F}$ é $\sigma$-álgebra de subconjuntos de $\Omega$.}
 
-\bigskip
+\subsection*{a}
+$\Omega = \{ a,b,c\}$ e $\mathcal{F}=\{\{a,b\}, \{c\}, \emptyset \}$
 
-a) Os objetos e as caixas são diferentes?
+Não é $\sigma$-álgebra, pois $\{a,b,c\}=\Omega$ não pertence a $\mathcal{F}$.
 
-Quando os objetos e caixas são diferentes, existindo n objetos, tem, dessa forma, $2^n$ modos de arranjá-los em duas caixas distintas.
+\subsection*{b}
+$\Omega = \{ 1,2,3\}$ e $\mathcal{F}= \{\emptyset, \{1\}, \{2c\}, \{3\}, \{1,2c\}, \{1,3\}, \{2,3\}, \{1,2,3\} \}$
 
-Porém, excluí-se duas dessas opções, uma vez que nenhuma das duas caixas pode ficar vazia. Dessa forma, têm-se como resposta do exercício $2^n-2$ modos de distribuir n objetos distintos em duas caixas distintas. 
+É $\sigma$-álgebra, pois todas as condições abaixo são satisfeitas.
 
-\bigskip
+\begin{itemize}
+\item[-] $\Omega \in \mathcal{F}$;
+\item[-] Se $A \in \mathcal{F}$, então $A^c \in \mathcal{F}$;
+\item[-] $\overset{\infty}{\underset{i=1}{\cup}} A_i \in \mathcal{F}$.
+\end{itemize}
 
-b) Os objetos são iguais e as caixas diferentes?
+\subsection*{c}
+$\Omega = \mathbb{N}$ e $\mathcal{F}=\{ A \subseteq \mathbb{N}: \text{A ou } A^c \text{ é finito} \}$
 
-Considerando as caixas A e B, têm-se:
+É $\sigma$-álgebra, pois todas as condições abaixo são satisfeitas.
 
-\begin{tabular}{cc}
-	$A$ & $B$ \\ 
-	**** ... nX * & I \\ 
-\end{tabular} 
-   
-Utilizando-se o conceito de Combinações Completas, têm-se: \medskip
+\begin{itemize}
+\item[-] $\Omega \in \mathcal{F}$;
+\item[-] Se $A \in \mathcal{F}$, então $A^c \in \mathcal{F}$;
+\item[-] $\overset{\infty}{\underset{i=1}{\cup}} A_i \in \mathcal{F}$.
+\end{itemize}
 
-$\displaystyle \dfrac{(n+1)!}{n!}=n+1$ \medskip
+\subsection*{d}
+$\Omega = \mathbb{R}$ e $\mathcal{F}=\mathcal{F_1} \cup \mathcal{F_2} \}$, em que $\mathcal{F_1}$ e $\mathcal{F_2}$ são $\sigma$-álgebra de subconjuntos de $\mathbb{R}$
 
-Uma vez que as caixas devem ter no mínimo um objeto, deve-se desconsiderar dois arranjos. Assim sendo, a resposta do problema é $n+1-2=n-1$. Portanto, $n-1$ modos de arranjar os objetos.
+Não é $\sigma$-álgebra, pois $\{a,b,c\}=\Omega$ não pertence a $\mathcal{F}$.
 
-\section*{Exercício 11}
+\section*{Exercício 08 - Considere um experimento em que um elemento do conjunto $\{1,2,3,4\}$ é selecionado ao acaso. Neste cenário, os eventos $A=\{1,2\}$, $B=\{1,3\}$, $C=\{1,4\}$ são independentes?}
 
-a) Um químico possui 10 tipos de substâncias: $/{A_1, A_2, .., A_n/}$. De quantos modos poderá combinar 6 dessas substâncias se, entre as dez, duas não podem estar juntas?
+Sejam as seguintes probabilidades:
 
-\textbf{1º Caso:} $A_1$ está na reação
-Arranjemos do seguinte modo:
-$A_1 \times 8 \times 7 \times 6 \times 5 \times 4 = 6720$.
+$\displaystyle P(A)=\frac{1}{2}$
 
-Como a ordem não importa neste caso, dividiremos o resultado por 5!, resultando em 56 modos distintos.
+$\displaystyle P(B)=\frac{1}{2}$
 
-\textbf{2º Caso:} $A_2$ está na reação
-Arranjemos do seguinte modo:
-$A_2 \times 8 \times 7 \times 6 \times 5 \times 4 = 6720$.
+$\displaystyle P(C)=\frac{1}{2}$
 
-Como a ordem não importa neste caso, dividiremos o resultado por 5!, resultando em 56 modos distintos.
+$\displaystyle P(A \cap B)=\frac{1}{4}$
 
-\textbf{3º Caso:} Nem $A_1$, nem $A_2$ estão na reação. Arranjemos do seguinte modo:
-$8 \times 7 \times 6 \times 5 \times 4 \times 3 = 20160$.
+$\displaystyle P(A \cap C)=\frac{1}{4}$
 
-Como a ordem não importa neste caso, dividiremos o resultado por 6!, resultando em 28 modos distintos.
+$\displaystyle P(B \cap C)=\frac{1}{4}$ \bigskip
 
-Assim sento, pelo Princípio Aditivo, têm-se $56 + 56 + 28 = 140$ reações distintas.
+- Verificando se os eventos A e B são independentes se $\displaystyle P(A \cap B)=P(A)P(B)$.
 
-b) O mesmo químico tem a hipótese de que ao dissolver 5 doses de 2 ml das substâncias $/{A_1, .., A_10/}$ (as doses podem ser repetidas) em 5 ml de água, obterá uma solução útil ao combate da dengue. O químico precisa fazer um experimento no laboratório com todas as soluções possíveis. Qualé o número máximo de testes a serem feitos pelo químico? (suponha que a ordem de dissolução não afeta a solução final).
+Então: $\displaystyle P(A \cap B)=\frac{1}{4} \Longleftrightarrow P(A)P(B)=\frac{1}{2} \times \frac{1}{2} =\frac{1}{4}$
 
-Como a ordem das substâncias não importa, temos pelo princípio da Combinação Completa a seguinte resolução:
+Portanto A e B são independentes. \bigskip
 
-\begin{tabular}{cccccccccc}
-	$A_1$ & $A_2$ & $A_3$ & $A_4$ & $A_5$ & $A_6$ & $A_7$ & $A_8$ & $A_9$ & $A_10$ \\ 
-	***** & I & I & I & I & I & I & I & I & I \\ 
-\end{tabular}  
-       
-Assim sendo, temos $\displaystyle \dfrac{14!}{5! \times 9!} = 2002$. Logo, há 2002 testes a serem feitos.
+- Verificando se os eventos A e C são independentes se $\displaystyle P(A \cap C)=P(A)P(C)$.
 
-\section*{Exercício 13}
+Então: $\displaystyle P(A \cap C)=\frac{1}{4} \Longleftrightarrow P(A)P(C)=\frac{1}{2} \times \frac{1}{2} =\frac{1}{4}$
 
-Seja $\mathcal{F}$ a classe das funções que associam o conjunto $\{1, 2, ..., 2n+1\}$ ao conjunto $\{1,2, ... , 2n\}$, $n \geq 1$, isto é:
+Portanto A e C são independentes.
 
-$\mathcal{F} = \{ f: \{1, 2, ...,2n+1 \} \rightarrow \{1, 2, ..., 2n \} \}$
+- Verificando se os eventos B e C são independentes se $\displaystyle P(B \cap C)=P(B)P(C)$.
 
-Sejam ainda os seguintes subconjuntos de $\mathcal{F}$:
+Então: $\displaystyle P(B \cap C)=\frac{1}{4} \Longleftrightarrow P(B)P(C)=\frac{1}{2} \times \frac{1}{2} =\frac{1}{4}$
 
-$\mathcal{I}:$ constituído pelas funções de $\mathcal{F}$ que associam a cada número ímpar um número par,
+Portanto B e C são independentes.
 
-$\mathcal{S}:$ constituído pelas funções sobrejetoras de $\mathcal{F}$.
+No caso dos três eventos, temos $\displaystyle P(A \cap B \cap C)=\frac{1}{4}$ (devido ao elemento 1 pertencer aos três eventos). Porém, $\displaystyle P(A)P(B)P(C)=\frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = \frac{1}{8}$. Portanto, A, B e C não são independentes entre si porque $\displaystyle P(A \cap B \cap C) \neq P(A)P(B)P(C)$.
 
-Determine $|\mathcal{F}|, |\mathcal{I}| e |\mathcal{S}|$.
+\section*{Exercício 11 - Alguns amigos estão em uma lanchonete. Sobre a mesa há duas travessas. Em uma delas há 3 pastéis e 5 coxinhas. Na outra há 2 coxinhas e 4 pastéis. Se ao acaso alguém escolher uma destas travessas e também ao acaso pegar um dos salgados, qual a probabilidade de se ter pegado um pastel?}
 
-Para calcular $|\mathcal{F}|$, é considerado que os elementos do conjunto de tamanho $2n$ obrigatoriamente devem receber pelo menos 1 relacionamento com qualquer um dos elementos do conjunto que possuí $2n+1$ elementos. Portanto, $|\mathcal{F}| = 2n^{2n+1}$.
+Seja o modelo apresentado na figura a seguir:
 
-Para encontrar $|\mathcal{I}|$, é considerado que os conjuntos de dividem em em 2 subconjuntos (elementos pares e elementos impares). Assim sendo, o conjunto que possuí $2n+1$ elementos é dividido da seguinte maneira: n elementos pares e n+1 elementos ímpares. O outro conjunto, que possuí 2n elementos é dividido da seguinte maneira: n elementos pares e n elementos ímpares. Com isso, apenas a parte com n+1 (elementos ímpares) elementos do conjunto que possuí 2n+1 elementos irá se relacionar com os elementos do outro conjunto, ou seja, $n^{n+1}$. Resta então, permutar os demais elementos que não fazem parte da restrição, ou seja, $2n^{n}$. Portanto, aplicando o principio multiplicativo temos que $|\mathcal{I}| = n^{n+1} \times 2n^{n}$.
+\begin{figure}[H]
+\centering\includegraphics[width=0.6\paperwidth]{coxinha.png}
+\end{figure}
 
-Para a definição de $|\mathcal{S}|$, considera-se que todos elementos do conjunto com $2n$ elementos terá pelo menos uma relação com os elementos do outro conjunto de tamanho $2n+1$. Sendo assim, a contrapartida desta relação terá de imediato uma $C_{2n-1}^2$, pois o conjunto de tamanho $2n+1$ tem 1 elemento a mais do que o outro conjunto, sendo que os elementos deste outro conjunto receberão pelo menos 2 relações de cada um dos elementos do conjunto de tamanho $2n+1$. Além disso, sobrarão $(2n-1)!$ elementos do conjunto de tamanho $2n+1$ que se relacionarão com todos os elementos do conjunto de tamanho $2n+1$, pois são eliminados dois elementos devido a primeira restrição já aplicada. Portanto, aplicando o principio multiplicativo temos que $|\mathcal{S}| = C_{2n-1}^2 \times (2n-1)!$.
+Então:
 
-\section*{Exercício 15}
+$\displaystyle P(P)=P(P/T1)+P(P/T2)=(\frac{1}{2} \times \frac{3}{8})+(\frac{1}{2} \times \frac{4}{6})=\frac{25}{48}$
 
-Determine os números de possíveis anagramas das palavras SUSSURRO, VESTIBULAR e BATATA.
+\section*{Exercício 12 - Quando $P(A)=1/2, P(B)=3/4$ e $P(A \cup B)=1$, quanto vale?}
 
-\bigskip
+\subsection*{a) $P(A \cap B)$}
 
-a) SUSSURRO - Esta palavra possui repetição de letras,portanto será aplicada a regra da \textit{permutação com elementos nem todos distintos}.
+$\displaystyle P(A \cup B)=P(A)P(B)-P(A \cap B)$
 
-Temos então a seguinte organização das 8 letras: SSS UU RR O (3 S, 2 U, 2 R e 1 O), e com isso a fórmula será $\displaystyle P_{8}^{3221} $
+$\displaystyle P(A \cap B)=P(A)P(B)-P(A \cup B)$
 
-$= C_8^3 \times C_5^2 \times C_3^2 \times C_1^1$
+$\displaystyle P(A \cap B)=\frac{1}{2} \times \frac{3}{4} - 1$
 
-$=56 \times 10 \times 3 \times 1 = 1680$ anagramas
+$\displaystyle P(A \cap B)=\frac{1}{4}$
 
-\bigskip
+\subsection*{b) $P(A^c \cap B^c)$}
 
-b) VESTIBULAR - Esta palavra não possui letras repetidas,portanto trata-se de uma \textit{permutação simples}.
+Seja $P(A^c \cap B^c) = P[(A \cup B)^c]$
 
-Temos então $P_{10}$
+$\displaystyle  P[A \cup B] = 1 -  P[(A \cup B)^c]$
 
-$= 10!$
+$\displaystyle  P[(A \cup B)^c] = 1 - P[A \cup B]$
 
-$= 10 \times 9 \times ... \times 1$
+$\displaystyle P[(A \cup B)^c] = 1 - 1 = \emptyset$
 
-$= 3628800$ anagramas
 
-\bigskip
+\subsection*{c) $P(A \cap B^c)$}
 
-c) BATATA - Esta palavra possui repetição de letras,portanto será aplicada a regra da \textit{permutação com elementos nem todos distintos}.
+Seja $P(A \cap B) = 1/4$
 
-Temos então a seguinte organização das 6 letras: AAA TT B (3 A, 2 T e 1 B), e com isso a fórmula será $\displaystyle P_{6}^{321} $
+$P(A \cap B^c) = P(A)-P(A \cap B) = 1/2-1/4=1/4$
 
-$= C_6^3 \times C_3^2 \times C_1^1$
+\subsection*{d) $P(A^c \cap B)$}
 
-$= 20 \times 3 \times 1 = 60$ anagramas
+Seja $P(A \cap B) = 1/4$
 
-\section*{Exercício 20}
+$P(A^c \cap B) = P(B)-P(A \cap B) = 3/4-1/4=1/2$
 
-Quantas são as soluções não negativas da inequação $x + y + z \leq 2$?
+\subsection*{e) $P(A | B)$ e $P(B | A)$}
 
-Trata-se de um problema envolvendo \textbf{combinações completas}. \medskip
+Seja $P(A \cap B) = 1/4 = P(B \cap A)$
 
-$CR_n^p = C_{n+p-1}^p$ \medskip
+$\displaystyle P(A | B) = \frac{P(A \cap B)}{P(B)}=\frac{1/4}{3/4}=1/3$
 
-E sendo $\displaystyle C_{n+p-1}^p = \binom{n+p-1}{p} = \frac{(n+p-1)!}{(n-1)! \times p!}$
+e
 
-Então, são apresentadas todas as possibilidades de solução da inequação:
+$\displaystyle P(B | A) = \frac{P(B \cap A)}{P(A)}=\frac{1/4}{1/2}=1/2$
 
-$x + y + z = 2 \rightarrow CR_3^2 \rightarrow C_4^2$; aqui tem-se n=3 e p=2.
 
-$x + y + z = 1 \rightarrow CR_3^1 \rightarrow C_3^1$; aqui tem-se n=3 e p=1.
 
-$x + y + z = 0 \rightarrow CR_3^0 \rightarrow C_2^0$; aqui tem-se n=3 e p=0. \medskip
 
-Aplicando o \textit{principio aditivo}, temos que as soluções não negativas para inequação pode ser dada por $C_4^2 + C_3^1 + C_2^0 = 6 + 3 + 1 = 10$ maneiras de solucionar.
+
+
+
 
 \bibliographystyle{plain}
 \bibliography{bibliography.bib}
