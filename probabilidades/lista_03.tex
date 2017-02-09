@@ -27,47 +27,60 @@
 
 $\Omega = \{A \subseteq \{1,2,3,4,5,6\}: |A|=3\}$
 
-Considerando que a ordem importa, pois $[1,2,3] \neq [2,1,3]$, temos $A_6^3=120$ elementos.
+Considerando que são 6 possibilidades para cada lançamento do dado e faremos 3 lançamentos, então teremos $6^3=216$ elementos. Não será descrito todo o conjunto devido ao seu tamanho ser grande. Porém $\Omega = \{ \{1,1,1 \}, \{1,1,2 \}, \{1,1,3 \},..., \{6,6,6 \} \}$.
 
 \subsection*{b - Numa determinada cidade, no mês de março, conta-se o número de problemas nas tubulações de água do bairro x.}
 
 $\Omega = \{B \subseteq \{0,1,2,3,...,n\}: |B|=1\}$
 
-Neste caso, teremos $n+1$ elementos.
+Neste caso, teremos $n+1$ elementos. 
 
-\subsection*{c  - Um fichário com 13 nomes contém três nomes de mulheres. Seleciona-se fica a ficha, até o último nome de mulher ser selecionado, e anota-se o número de fichas selecionadas.}
+Obs: Se considerar um conjunto de infinitos elementos, pode-se considerar que $n \rightarrow \infty$ e neste caso teríamos infinitos elementos.
 
-$\Omega = \{C \subseteq \{1,2,3,..,13\}: 3 \leq |C| \leq 13\}$
+\subsection*{c  - Um fichário com 13 nomes contém três nomes de mulheres. Seleciona-se ficha a ficha, até o último nome de mulher ser selecionado, e anota-se o número de fichas selecionadas.}
 
-Considerando que as fichas são selecionadas sem reposição, temos \textbf{???}
+$\Omega = \{C \subseteq \mathbb{Z}: 3 \leq |C| \leq 13\}$
+
+Considerando que as fichas são selecionadas uma a uma e precisamos de pelo menos 3 fichas, teremos 11 elementos. $\Omega = \{3,4,5,6,7,8,9,10,11,12,13\}$.
 
 \subsection*{d - De um grupo de seis pessoas A, B, C, D, E e F, sorteiam-se duas, uma após a outra, sem reposição, e anota-se a configuração formada.}
 
-$\Omega = \{D \subseteq \{A,B,C,D,E,F\}: |D|=2\}$
+$\Omega = \{D \subseteq \{A,B,C,D,E,F\}: |D|=2 \text{ em que } [D_i, D_j] \neq [D_j, D_i]\}$
 
-Considerando que o sorteio é sem reposição, o número de elementos será $C_6^2=10$ elementos.
+Considerando que o sorteio é sem reposição e a ordem entre os dois sorteados importa, teremos 30 elementos.
 
-\subsection*{e - Como ficaria o espaço amostral do item c se as retiradas fossem com reposição.}
+Fazendo-se as combinações teríamos: \\
+$\Omega = \{ AB, AC, AD, AE, AF, \\ BA, BC, BD, BE, BF, \\ CA, CB, CD, CE, CF, \\ DA, DB, DC, DE, DF, \\ EA, EB, EC, EF, \\ FA, FB, FC, FD, FE \}$
 
-???
+\subsection*{e - Como ficaria o espaço amostral do item d se as retiradas fossem com reposição.}
+
+$\Omega = \{D \subseteq \{A,B,C,D,E,F\}: |D|=2 \text{ em que } [D_i, D_j] = [D_i, D_i] \text{ ou } [D_i, D_j] \neq [D_j, D_i]\}$
+
+Considerando que o sorteio é com reposição e a ordem entre os dois sorteados importa, teremos os 30 elementos encontrados anteriormente e mais 6 elementos representando as reposições $\{ AA, BB, CC, DD, EE, FF\}$. Portanto, 36 elementos.
 
 \subsection*{f - De um pacote contendo 20 jujubas, observa-se quantas tem a cor vermelha.}
 
-$\Omega = \{F \subseteq \{1,2,3,...,20\}: 1 \leq |F| \leq 20\}$
+$\Omega = \{F \subseteq \{0,1,2,3,...,20\}: 1 \leq |F| \leq 20\}$
 
-O número de elementos será 20.
+O número de elementos será 21. Ou seja: \\
+
+$\Omega = \{ 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20\}$.
 
 \subsection*{g - Registram-se o número de dias chuvosos e a precipitação total (em centímetros) durante uma semana em uma localidade.}
 
-Seja C (dias chuvosos) e P (precipitação em mm), temos o seguinte espaço amostral.
+Seja C (dias chuvosos) e P (precipitação em cm), temos o seguinte espaço amostral.
 
-$\Omega = \{C \in \mathbb{Z_+}, P \in \mathbb{R} | C=[0,7], P=[0,200]$
+$\Omega = \{C \in \mathbb{Z}, P \in \mathbb{R} | C=[0,7], P=[0,\infty]$
+
+Portanto, como P pode variar entre zero e infinito, teríamos infinitos elementos.
 
 \subsection*{h - Um dado é lançado em um alvo circular de raio unitário e observa-se o ponto acertado.}
 
-Sendo A (área do circulo=$\pi \times r^2$) e H (ponto acertado) nas posições x (horizontal) e y (vertical), temos:
+Sendo as posições x (horizontal) e y (vertical) onde o dado será lançado, temos:
 
-$\Omega = \{H \in \mathbb{R}; H \subseteq A | A=\pi \times r^2, H = [x,y], x = [-1,1], y = [-1,1]\}$
+$\Omega = \{ (x,y) \in \mathbb{R} : x^2 + y^2 \leq 1 \}$
+
+Neste caso, o total de elementos será infinitos pontos.
 
 \section*{Exercício 02 - Em cada um dos casos, verifique se $\mathcal{F}$ é $\sigma$-álgebra de subconjuntos de $\Omega$.}
 
@@ -101,7 +114,7 @@ $\Omega = \mathbb{N}$ e $\mathcal{F}=\{ A \subseteq \mathbb{N}: \text{A ou } A^c
 \subsection*{d}
 $\Omega = \mathbb{R}$ e $\mathcal{F}=\mathcal{F_1} \cup \mathcal{F_2} \}$, em que $\mathcal{F_1}$ e $\mathcal{F_2}$ são $\sigma$-álgebra de subconjuntos de $\mathbb{R}$
 
-Não é $\sigma$-álgebra, pois $\{a,b,c\}=\Omega$ não pertence a $\mathcal{F}$.
+Não é $\sigma$-álgebra, pois $\Omega$ não pertence a $\mathcal{F}$.
 
 \section*{Exercício 08 - Considere um experimento em que um elemento do conjunto $\{1,2,3,4\}$ é selecionado ao acaso. Neste cenário, os eventos $A=\{1,2\}$, $B=\{1,3\}$, $C=\{1,4\}$ são independentes?}
 
@@ -171,7 +184,7 @@ $\displaystyle  P[A \cup B] = 1 -  P[(A \cup B)^c]$
 
 $\displaystyle  P[(A \cup B)^c] = 1 - P[A \cup B]$
 
-$\displaystyle P[(A \cup B)^c] = 1 - 1 = \emptyset$
+$\displaystyle P[(A \cup B)^c] = 1 - 1 = 0$
 
 
 \subsection*{c) $P(A \cap B^c)$}
